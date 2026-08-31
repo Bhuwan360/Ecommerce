@@ -1,0 +1,172 @@
+/* ============================================================
+   Components — cards, buttons, badges, cart lines
+   ============================================================ */
+
+/* ---- Buttons ---- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-2);
+  font-family: var(--f-display);
+  font-weight: 600;
+  font-size: var(--fs-xs);
+  padding: 0.7rem 1.15rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid transparent;
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
+}
+.btn-primary { background: var(--c-safelight); color: var(--c-base); }
+.btn-primary:hover { background: var(--c-safelight-hi); }
+.btn-primary:disabled { background: var(--c-fixer-dim); color: var(--c-paper-faint); cursor: not-allowed; }
+.btn-outline { border-color: var(--c-border); color: var(--c-paper); }
+.btn-outline:hover { border-color: var(--c-paper-dim); }
+.btn-quiet { color: var(--c-paper-dim); font-size: var(--fs-xs); }
+.btn-quiet:hover { color: var(--c-safelight); }
+.btn-block { width: 100%; justify-content: center; }
+
+/* ---- Product card ---- */
+.product-card {
+  background: var(--c-base);
+  padding: var(--sp-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-3);
+}
+
+.product-card .frame-art { position: relative; }
+
+/* 35mm perforation motif along the top edge of every frame — the
+   one signature device the whole catalog is built around. */
+.sprocket-row {
+  display: flex;
+  justify-content: space-between;
+  padding-inline: 2px;
+  margin-bottom: var(--sp-2);
+}
+.sprocket-row span {
+  width: 6px; height: 4px;
+  background: var(--c-border);
+}
+
+.frame-art svg { width: 100%; height: auto; aspect-ratio: 4 / 3; }
+
+.product-card-body { display: flex; flex-direction: column; gap: var(--sp-1); flex: 1; }
+.product-kicker {
+  font-family: var(--f-mono);
+  font-size: var(--fs-2xs);
+  color: var(--c-fixer);
+  letter-spacing: 0.02em;
+}
+.product-name {
+  font-family: var(--f-display);
+  font-weight: 600;
+  font-size: var(--fs-md);
+  line-height: 1.25;
+}
+.product-name a:hover { color: var(--c-safelight); }
+.product-blurb {
+  font-size: var(--fs-sm);
+  color: var(--c-paper-dim);
+  line-height: 1.45;
+}
+
+.product-card-foot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: auto;
+  padding-top: var(--sp-2);
+}
+.product-price { font-family: var(--f-mono); font-size: var(--fs-sm); color: var(--c-paper); }
+.product-price .was { color: var(--c-paper-faint); text-decoration: line-through; margin-right: 0.4em; font-size: 0.85em; }
+
+.add-btn {
+  width: 2.1rem; height: 2.1rem;
+  display: inline-flex; align-items: center; justify-content: center;
+  border: 1px solid var(--c-border);
+  color: var(--c-paper);
+  border-radius: var(--radius-sm);
+  transition: border-color 0.15s, background 0.15s, color 0.15s;
+}
+.add-btn:hover { border-color: var(--c-safelight); color: var(--c-safelight); }
+.add-btn.is-added { background: var(--c-fixer-dim); border-color: var(--c-fixer); color: var(--c-paper); }
+
+.stock-badge {
+  font-family: var(--f-mono);
+  font-size: var(--fs-2xs);
+  color: var(--c-paper-faint);
+}
+.stock-badge.low { color: var(--c-safelight); }
+
+/* ---- Detail page ---- */
+.detail-frame { border: 1px solid var(--c-border); padding: var(--sp-5); }
+.detail-title {
+  font-family: var(--f-display);
+  font-weight: 700;
+  font-size: var(--fs-2xl);
+  letter-spacing: -0.01em;
+  line-height: 1.05;
+}
+.detail-kicker { font-family: var(--f-mono); font-size: var(--fs-xs); color: var(--c-fixer); margin-bottom: var(--sp-2); }
+.detail-price { font-family: var(--f-mono); font-size: var(--fs-lg); margin-block: var(--sp-4); }
+.detail-copy { color: var(--c-paper-dim); max-width: 52ch; line-height: 1.6; }
+
+.spec-table { margin-top: var(--sp-6); border-top: 1px solid var(--c-border); }
+.spec-table .spec-row { font-size: var(--fs-xs); }
+
+.qty-row { display: flex; align-items: center; gap: var(--sp-4); margin-top: var(--sp-6); }
+.qty-stepper { display: inline-flex; border: 1px solid var(--c-border); }
+.qty-stepper button { width: 2.2rem; height: 2.2rem; color: var(--c-paper); font-family: var(--f-mono); }
+.qty-stepper button:hover { color: var(--c-safelight); }
+.qty-stepper span {
+  width: 2.4rem; text-align: center; font-family: var(--f-mono);
+  display: inline-flex; align-items: center; justify-content: center;
+  border-inline: 1px solid var(--c-border);
+}
+
+/* ---- Cart line items ---- */
+.cart-line {
+  display: grid;
+  grid-template-columns: 3.5rem 1fr auto;
+  gap: var(--sp-3);
+  padding-block: var(--sp-4);
+  border-bottom: 1px solid var(--c-border-soft);
+}
+.cart-line-art { width: 3.5rem; }
+.cart-line-art svg { width: 100%; aspect-ratio: 1; }
+.cart-line-name { font-family: var(--f-display); font-weight: 600; font-size: var(--fs-sm); }
+.cart-line-meta { font-family: var(--f-mono); font-size: var(--fs-2xs); color: var(--c-paper-faint); margin-top: 0.2rem; }
+.cart-line-qty { display: flex; align-items: center; gap: var(--sp-2); margin-top: var(--sp-2); }
+.cart-line-qty button {
+  width: 1.5rem; height: 1.5rem; border: 1px solid var(--c-border); color: var(--c-paper);
+  font-family: var(--f-mono); font-size: var(--fs-xs);
+}
+.cart-line-price { font-family: var(--f-mono); font-size: var(--fs-sm); text-align: right; }
+.cart-line-remove { display: block; margin-top: var(--sp-2); font-size: var(--fs-2xs); color: var(--c-paper-faint); }
+.cart-line-remove:hover { color: var(--c-safelight); }
+
+.cart-empty { padding-block: var(--sp-6); color: var(--c-paper-dim); }
+
+.summary-panel { border: 1px solid var(--c-border); padding: var(--sp-5); }
+.summary-row { display: flex; justify-content: space-between; font-family: var(--f-mono); font-size: var(--fs-sm); padding-block: var(--sp-2); }
+.summary-row.total { border-top: 1px solid var(--c-border); margin-top: var(--sp-2); padding-top: var(--sp-4); font-size: var(--fs-md); color: var(--c-paper); }
+
+/* ---- Toast ---- */
+.toast {
+  position: fixed;
+  left: 50%;
+  bottom: var(--sp-6);
+  transform: translate(-50%, 0.5rem);
+  background: var(--c-surface-2);
+  border: 1px solid var(--c-safelight);
+  color: var(--c-paper);
+  font-family: var(--f-display);
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  padding: 0.7rem 1.1rem;
+  z-index: 80;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.18s var(--ease-out), transform 0.18s var(--ease-out);
+}
+.toast.is-visible { opacity: 1; transform: translate(-50%, 0); }
