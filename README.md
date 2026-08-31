@@ -6,8 +6,8 @@ A production-ready, highly performant E-commerce Product Catalog web application
 
 ## 🚀 Live Demo & Repository
 
-* **Deployment URL:** https://ecommerce-capstone-inky.vercel.app/
-* **GitHub Repository:** https://github.com/devmunk/ecommerce-capstone
+* **Deployment URL:** https://ecommerce-75on.vercel.app/
+* **GitHub Repository:** https://github.com/Bhuwan360/Ecommerce
 
 
 ---
