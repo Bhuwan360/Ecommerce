@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "title": "Wireless Noise-Canceling Headphones",
+    "category": "Electronics",
+    "price": 199.99,
+    "rating": 4.7,
+    "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500&auto=format&fit=crop&q=80",
+    "description": "High-fidelity wireless headphones with active noise cancellation, 30-hour battery life, and ultra-soft memory foam earcups."
+  },
+  {
+    "id": 2,
+    "title": "Ergonomic Mechanical Keyboard",
+    "category": "Electronics",
+    "price": 129.50,
+    "rating": 4.8,
+    "image": "https://images.unsplash.com/photo-1587829741301-dc798b83add3?w=500&auto=format&fit=crop&q=80",
+    "description": "Customizable RGB mechanical keyboard with tactile switches and an ergonomic split layout for maximum typing comfort."
+  },
+  {
+    "id": 3,
+    "title": "Minimalist Leather Backpack",
+    "category": "Accessories",
+    "price": 89.00,
+    "rating": 4.5,
+    "image": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=500&auto=format&fit=crop&q=80",
+    "description": "Crafted from full-grain leather, this water-resistant backpack features a padded 15-inch laptop sleeve and sleek organizational pockets."
+  },
+  {
+    "id": 4,
+    "title": "Stainless Steel Thermal Bottle",
+    "category": "Lifestyle",
+    "price": 34.99,
+    "rating": 4.6,
+    "image": "https://images.unsplash.com/photo-1602143407151-7111542de6e8?w=500&auto=format&fit=crop&q=80",
+    "description": "Double-wall vacuum-insulated water bottle that keeps drinks cold for 24 hours or hot for 12 hours. BPA-free and leak-proof."
+  },
+  {
+    "id": 5,
+    "title": "Smart Fitness Watch",
+    "category": "Electronics",
+    "price": 149.99,
+    "rating": 4.4,
+    "image": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=500&auto=format&fit=crop&q=80",
+    "description": "Track heart rate, sleep quality, and daily activities with built-in GPS, custom watch faces, and 7-day battery life."
+  },
+  {
+    "id": 6,
+    "title": "Polarized Sunglasses",
+    "category": "Accessories",
+    "price": 45.00,
+    "rating": 4.3,
+    "image": "https://images.unsplash.com/photo-1511499767150-a48a237f0083?w=500&auto=format&fit=crop&q=80",
+    "description": "Classic matte black frames featuring UV400 polarized lenses that reduce glare and provide superior visual clarity."
+  }
+]

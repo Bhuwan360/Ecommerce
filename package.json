@@ -1,0 +1,14 @@
+{
+  "name": "ecommerce-catalog-capstone",
+  "version": "1.0.0",
+  "description": "Production-ready E-commerce Product Catalog",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "dependencies": {
+    "ejs": "^3.1.9",
+    "express": "^4.19.2"
+  }
+}

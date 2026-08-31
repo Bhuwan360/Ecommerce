@@ -1,0 +1,23 @@
+<%- include('partials/header') %>
+
+<div class="detail-container">
+  <a href="/" class="back-link">&larr; Back to Catalog</a>
+  
+  <div class="product-detail">
+    <div class="detail-image-wrapper">
+      <img src="<%= product.image %>" alt="<%= product.title %>">
+    </div>
+    <div class="detail-info">
+      <span class="category-badge"><%= product.category %></span>
+      <h1><%= product.title %></h1>
+      <div class="detail-meta">
+        <span class="price">$<%= product.price.toFixed(2) %></span>
+        <span class="rating">★ <%= product.rating %> / 5.0</span>
+      </div>
+      <p class="description"><%= product.description %></p>
+      <button class="btn-primary" onclick="alert('Item added to cart!')">Add to Cart</button>
+    </div>
+  </div>
+</div>
+
+<%- include('partials/footer') %>

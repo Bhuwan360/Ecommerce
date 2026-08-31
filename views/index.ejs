@@ -1,0 +1,47 @@
+<%- include('partials/header') %>
+
+<section class="hero">
+  <h1>Discover Premium Products</h1>
+  <p>Explore our curated catalog of high-quality gear and accessories.</p>
+</section>
+
+<section class="controls-section">
+  <div class="search-box">
+    <input type="text" id="searchInput" placeholder="Search products..." autocomplete="off">
+  </div>
+  
+  <div class="category-filters">
+    <button class="filter-btn active" data-category="all">All</button>
+    <% categories.forEach(category => { %>
+      <button class="filter-btn" data-category="<%= category %>"><%= category %></button>
+    <% }); %>
+  </div>
+</section>
+
+<section class="catalog-container">
+  <div id="productGrid" class="product-grid">
+    <% if (products.length === 0) { %>
+      <p class="no-results">No products found.</p>
+    <% } else { %>
+      <% products.forEach(product => { %>
+        <article class="product-card">
+          <a href="/product/<%= product.id %>" class="card-link">
+            <div class="image-wrapper">
+              <img src="<%= product.image %>" alt="<%= product.title %>" loading="lazy">
+            </div>
+            <div class="card-content">
+              <span class="category-badge"><%= product.category %></span>
+              <h2 class="product-title"><%= product.title %></h2>
+              <div class="card-footer">
+                <span class="price">$<%= product.price.toFixed(2) %></span>
+                <span class="rating">★ <%= product.rating %></span>
+              </div>
+            </div>
+          </a>
+        </article>
+      <% }); %>
+    <% } %>
+  </div>
+</section>
+
+<%- include('partials/footer') %>
